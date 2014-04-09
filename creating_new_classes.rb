@@ -20,7 +20,7 @@ class Die
   end
 end
 
-class Orange_tree
+class OrangeTree
   
   def initialize
     @alive = true
@@ -54,7 +54,7 @@ class Orange_tree
     end
   
     
-    if @age >= 100
+    if @age >= 10
       @alive = false
       puts "This tree has died, at the ripe age of #{age}."
     end
@@ -79,6 +79,7 @@ class Orange_tree
   def pick_an_orange
     if (@alive && @age > 5) && (@oranges > 0)
       @oranges -= 1
+      puts "You picked an orange."
     elsif @age < 5
       puts "This tree does not bear fruit yet."
     elsif @alive == false

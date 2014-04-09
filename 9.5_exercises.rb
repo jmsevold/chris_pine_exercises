@@ -1,7 +1,3 @@
-# # Improved ask method. That ask method I showed you was OK, 
-# but I bet you could do better. Try to clean it up by removing 
-# the answer variable. You’ll have to use return to exit from the loop.
-
 def ask(question)
   puts question
   reply = gets.chomp.downcase
@@ -18,7 +14,7 @@ def ask(question)
 end
 
 
-#old school roman numerals
+
 
 
 def old_roman_numeral(target)
@@ -49,6 +45,15 @@ def old_roman_numeral(target)
 end
 
 
-
-
-
+def new_roman_numerals(target) 
+  num = target
+  numerals = { 'M' => 1000, 'CM' => 900, 'D' => 500, 'CD'=> 400, 'C' => 100, 'XC' => 90, 
+    'L' => 50, 'XL' => 40, 'X' => 10, 'V' => 5, 'IV' => 4, 'I'=> 1 }
+  result = ""
+  numerals.each do |key,val|
+    count = num / val
+    count.times { result += key }
+    num -= val * count
+  end
+  result
+end

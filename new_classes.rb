@@ -8,7 +8,7 @@ def happy_birthday
   bday =  Time.local(year,month,day)
   age_seconds = Time.now - bday
   age = age_seconds / 31557600 
-  puts "You are #{age.to_i.to_s} years old. Prepare to receive #{age.to_i.to_s} spanks."
+  puts "You are #{age} years old. Prepare to receive #{age} spanks."
   age.to_i.times { puts "SPANK!"}
 end
   
